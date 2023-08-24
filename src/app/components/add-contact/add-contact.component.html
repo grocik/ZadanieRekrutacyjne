@@ -1,0 +1,52 @@
+<div class="container my-5">
+    <h1 class="mb-3">Add new contact</h1>
+    <div *ngIf="empty" class="alert alert-danger">Fill all data</div>
+    <form #form2="ngForm" (ngSubmit)="addContact()">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputName">Name</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Name" name="Name" [(ngModel)]="contactToAdd.name" required>
+          </div>
+          
+          <div class="form-group col-md-6">
+            <label for="inputSurename">Surename</label>
+            <input type="text" class="form-control" id="inputSurename" placeholder="Surename" name="Surename" [(ngModel)]="contactToAdd.surename">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail">Email</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="Email" [(ngModel)]="contactToAdd.email">
+        </div>
+        <div class="form-group">
+          <label for="inputPassword">Password</label>
+          <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="Password" [(ngModel)]="contactToAdd.password">
+        </div>
+        <div class="form-row">
+        <div class="form-group col-md-2">
+            <label for="inputCategory">Category</label>
+            <select id="inputCategory" class="form-control" name="Category" [(ngModel)]="contactToAdd.category">
+              <option selected *ngFor="let category of categories" [ngValue]="category.categoryName">{{ category.categoryName }} </option>
+            </select>
+          </div>
+          <div class="form-group col-md-2" *ngIf="contactToAdd.category === 'business'">
+            <label for="inputSubCategory">Sub Category</label>
+            <select id="inputSubCategory" class="form-control" name="SubCategory" [(ngModel)]="contactToAdd.subcategory">
+              <option selected *ngFor="let subCategory of subCategories" [ngValue]="subCategory.subCategoryName">{{ subCategory.subCategoryName }}</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2" *ngIf="contactToAdd.category === 'other'">
+            <label for="inputWrittenSubcategory">Sub Category</label>
+            <input type="text" class="form-control" id="inputWrittenSubcategory" placeholder="subcategory" name="WrittenSubcategory" [(ngModel)]="contactToAdd.subcategory">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="inputPhone">Phone</label>
+            <input type="tel" class="form-control" id="inputPhone" name="Phone" [(ngModel)]="contactToAdd.phoneNumber">
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputDateOfBirth">DateOfBirth</label>
+            <input type="date" class="form-control" id="inputDateOfBirth" name="BirthDate" [(ngModel)]="contactToAdd.birthDate">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </form>
+</div>

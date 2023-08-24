@@ -1,0 +1,41 @@
+<div class="container my-5">
+    <h1 class="mb-3">contacts</h1>
+    <table class="table" *ngIf="contacts && contacts.length > 0">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Surename</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>PhoneNumber</th>
+                <th>BirthDate</th>
+                <th>Category</th>
+                <th>SubCategory</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let contact of contacts">
+                <td>{{ contact.contactId }}</td>
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.surename }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.password }}</td>
+                <td>{{ contact.phoneNumber }}</td>
+                <td>{{ contact.birthDate }}</td>
+                <td>{{ contact.category }}</td>
+                <td *ngIf="contact.subcategory != null">{{contact.subcategory }}</td>
+                <td *ngIf="contact.subcategory == null"></td>
+                <td>
+                <button type="button" class="btn btn-outline-primary" [routerLink]="['editcontact',contact.contactId]" >Edit</button>
+                </td>
+                <td>
+                <button type="button" class="btn btn-outline-danger" (click)="deleteContact(contact.contactId)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h1 *ngIf="!contacts || contacts.length <= 0">No Contacts</h1>
+</div>
