@@ -1,13 +1,13 @@
 Wykorzystane biblioteki
-Bootstrap
-Angular-jwt
-BCrypt.net
-Microsoft.AspNetCore.Autentication.JwtBearer
-Microsoft.EnittyFramewordkCore.SqlServer
-Microsoft.EntityFrameworkCore.Tools
-MySql.Data
-MySql.EntityFrameworkCore
-SwashBuckle.AspNetCore
+Bootstrap  
+Angular-jwt  
+BCrypt.net  
+Microsoft.AspNetCore.Autentication.JwtBearer  
+Microsoft.EnittyFramewordkCore.SqlServer  
+Microsoft.EntityFrameworkCore.Tools  
+MySql.Data  
+MySql.EntityFrameworkCore  
+SwashBuckle.AspNetCore  
 
 
 
