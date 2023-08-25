@@ -1,4 +1,8 @@
-	Wykorzystane biblioteki
+   	
+ 	
+  
+  
+  	Wykorzystane biblioteki
 	Bootstrap  
 	Angular-jwt  
 	BCrypt.net  
@@ -104,6 +108,31 @@
 	~~SubcategoriesSeervice # klasa serwis obsługująca połączenie z api i componentami 
 		getCategories() #  wywołuje zapytanie do api w celu pobrania kategori
 
+	Sposób kompilacji 
+ 	angular
+ 	w folderze z angularem wpisać ng build ZadanieRekrutacyjne
+  	w enviroment.development.ts/enviroment.ts zmienić baseApiUrl na local host własnego api (jeżeli się zmieniło)
+   	w app.module.ts zmienić allowedDomains na local host api (jeżeli się zmieniło)
+
+    	.net
+     	w Program.cs zmienić ValidIssuser/ValidAudience na localhost api (jeżeli się zmieniło)
+      	w Program.cs zmienić w lin 43 na własną baze danych jeżeli inna niż MySql
+      	w appsettings.json zmienić connection string na własny
+
+       instalowanie bibliotek przez nugetmenagera
+       	Microsoft.AspNetCore.Autentication.JwtBearer  
+	Microsoft.EnittyFramewordkCore.SqlServer  
+	Microsoft.EntityFrameworkCore.Tools  
+	MySql.Data  
+	MySql.EntityFrameworkCore  
+	SwashBuckle.AspNetCore
+
+       stworzenie bazy danych 
+       w konsoli nugetmenagera 
+       Add-Migration "init"
+       Update-Database
+
+       zapełnienie dodanie kilku kategori i pod kategori w bazie danych
 
 
 	
