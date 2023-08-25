@@ -15,8 +15,8 @@
 	Metody i Klasy
 
 	.NET ~~
-	~~BasicContactsController # kontroler kontrolujący zapytania dotyczące podstawowych kontaktów
-		GetBasicContacts() # metoda get pobierająca z bazy podstawowe kontakty i zwracająca obiekt basisContact
+		~~BasicContactsController # kontroler kontrolujący zapytania dotyczące podstawowych kontaktów
+			GetBasicContacts() # metoda get pobierająca z bazy podstawowe kontakty i zwracająca obiekt basisContact
 	~~CategoriesController #  kontroler kontrolujący zapytania dotyczące kategori, chroniony
 		GetAllCategories() # get pobieranie wszystkich kategori z bazy 
 	~~Contacts Controller # kontroler kontrolujący zapytania dotyczące  kontaktów po zalogowaniu
