@@ -1,4 +1,3 @@
-# ZadanieRekrutacyjne
 Wykorzystane biblioteki
 Bootstrap
 Angular-jwt
